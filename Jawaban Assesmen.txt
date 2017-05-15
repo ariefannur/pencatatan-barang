@@ -1,0 +1,48 @@
+Jawaban Assesment Test
+1. Relative Layout
+2. Di dalam AndroidManifest.xml
+
+3. A.onCreate() - A.onStart() - A.onResume() - A.onPause() - A.onStop() - B.onCreate() - B.onStart() - B.onResume
+
+4. startActivity(new Intent(this, ActivityB.class));
+5. Akan muncul Toast dengan text "Finishing"
+6. seharusnya <user-permission android-name="android.permision.CALL_PHONE"/>
+
+7.
+ private static boolean checkAnagram(String str1, String str2){
+        char[] aArr = str1.toLowerCase().toCharArray();
+	char[] bArr = str2.toLowerCase().toCharArray();
+
+        if (aArr.length != bArr.length)
+            return false;
+
+        int[] counts = new int[26]; // Array untuk menampung alfabet data
+        for (int i = 0; i < aArr.length; i++){
+            counts[aArr[i]-97]++;  // Increment the count of the character at i
+            counts[bArr[i]-97]--;  // Decrement the count of the character at i
+        }
+        // jika anagram jumlahnya akan 0
+        for (int i = 0; i<26; i++)
+            if (counts[i] != 0)
+                return false;
+        return true;
+    }
+
+
+8.
+
+public String removeDupplicate(String str){
+	
+char[] chars = str.toCharArray();
+Set<Character> charSet = new LinkedHashSet<Character>();
+for (char c : chars) {
+    charSet.add(c);
+}
+
+StringBuilder sb = new StringBuilder();
+for (Character character : charSet) {
+    sb.append(character);
+}
+
+return sb.toString();
+}

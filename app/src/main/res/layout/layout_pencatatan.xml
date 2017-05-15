@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Karyawan"
+        style="@style/Base.TextAppearance.AppCompat.Caption"
+        />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Jhonyy"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:layout_marginBottom="4dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pemasok"
+        style="@style/Base.TextAppearance.AppCompat.Caption"
+        />
+
+    <EditText
+        android:id="@+id/etPemasok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Pemasok"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:layout_marginBottom="4dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tanggal"
+        style="@style/Base.TextAppearance.AppCompat.Caption"
+        />
+
+    <EditText
+        android:id="@+id/etTanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tanggal"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:layout_marginBottom="4dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Barang"
+        style="@style/Base.TextAppearance.AppCompat.Caption"
+        />
+
+    <LinearLayout
+        android:id="@+id/itemBarang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Barang"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        />
+
+</LinearLayout>
