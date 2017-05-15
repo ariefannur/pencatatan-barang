@@ -36,7 +36,7 @@ public class PencatatanActivity extends AppCompatActivity {
         txtUser.setText(user);
 
         layItem = (LinearLayout) findViewById(R.id.itemBarang);
-        layItem.addView(add(null));
+        add(null);
 
         btnAdd = (Button) findViewById(R.id.addItem);
         btnAdd.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +46,7 @@ public class PencatatanActivity extends AppCompatActivity {
                 dialogBarang.setOnSubmit(new DialogBarang.Submit() {
                     @Override
                     public void onSubmit(Barang barang) {
-                        layItem.addView(add(barang));
+                        add(barang);
                     }
                 });
                 dialogBarang.show();
@@ -64,10 +64,10 @@ public class PencatatanActivity extends AppCompatActivity {
     }
 
     ViewGroup add(Barang barang){
-        View v = LayoutInflater.from(this).inflate(R.layout.item_barang, null, false);
+        View v = LayoutInflater.from(this).inflate(R.layout.item_barang, layItem, true);
         TextView txtBarang = (TextView) v.findViewById(R.id.txtNamaBarang);
-        TextView txtHarga = (TextView) v.findViewById(R.id.txtNamaBarang);
-        TextView txtStok = (TextView) v.findViewById(R.id.txtNamaBarang);
+        TextView txtHarga = (TextView) v.findViewById(R.id.txtHarga);
+        TextView txtStok = (TextView) v.findViewById(R.id.txtStock);
 
         if(barang != null) {
             txtBarang.setText(barang.nama_barang);
