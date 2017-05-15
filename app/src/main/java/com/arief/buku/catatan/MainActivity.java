@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
                    Intent i = new Intent(getApplicationContext(), PencatatanActivity.class);
                    i.putExtra("user", nama);
                    startActivity(i);
+               }else{
+                   Toast.makeText(getApplicationContext(), "Nama dan password harus diisi", Toast.LENGTH_SHORT).show();
                }
 
            }

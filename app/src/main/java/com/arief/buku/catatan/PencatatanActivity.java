@@ -37,7 +37,7 @@ public class PencatatanActivity extends AppCompatActivity {
         layItem = (LinearLayout) findViewById(R.id.itemBarang);
         layItem.addView(add(null));
 
-        btnAdd = (Button) findViewById(R.id.btnAdd);
+        btnAdd = (Button) findViewById(R.id.addItem);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
