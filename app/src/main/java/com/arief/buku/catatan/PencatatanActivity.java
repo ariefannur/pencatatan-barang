@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -62,7 +63,7 @@ public class PencatatanActivity extends AppCompatActivity {
         return true;
     }
 
-    View add(Barang barang){
+    ViewGroup add(Barang barang){
         View v = LayoutInflater.from(this).inflate(R.layout.item_barang, null, false);
         TextView txtBarang = (TextView) v.findViewById(R.id.txtNamaBarang);
         TextView txtHarga = (TextView) v.findViewById(R.id.txtNamaBarang);
@@ -78,6 +79,6 @@ public class PencatatanActivity extends AppCompatActivity {
             txtStok.setText("Stok");
         }
 
-        return v;
+        return (ViewGroup) v;
     }
 }

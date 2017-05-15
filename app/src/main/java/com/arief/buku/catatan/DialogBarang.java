@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.arief.buku.catatan.model.Barang;
 
@@ -33,10 +34,17 @@ public class DialogBarang extends Dialog {
             public void onClick(View view) {
                 if(iSubmit != null){
                     Barang barang = new Barang();
-                    barang.nama_barang = etNamaBarang.getText().toString();
-                    barang.harga = Integer.parseInt(etHarga.getText().toString());
-                    barang.stok = Integer.parseInt(etStok.getText().toString());
-                    iSubmit.onSubmit(barang);
+                    if(etHarga.getText().toString().length() > 0 &&
+                            etNamaBarang.getText().toString().length() > 0 &&
+                            etStok.getText().toString().length() > 0
+                            ) {
+                        barang.nama_barang = etNamaBarang.getText().toString();
+                        barang.harga = Integer.parseInt(etHarga.getText().toString());
+                        barang.stok = Integer.parseInt(etStok.getText().toString());
+                        iSubmit.onSubmit(barang);
+                    }else{
+                        Toast.makeText(etHarga.getContext(), "Lengkapi semua data", Toast.LENGTH_SHORT).show();
+                    }
                 }
 
                 dismiss();
